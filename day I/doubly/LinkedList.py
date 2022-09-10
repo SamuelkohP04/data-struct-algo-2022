@@ -73,13 +73,18 @@ class LinkedList(abstract):
         Returns:
             index: index of the node which contains the data
         """
-        index = 0
-        pointer = self.head
+        index = -1
 
-        while pointer:
-            if pointer.data == data:
-                break
-            pointer = pointer.next
+        if self.count(data) > 0:
+            pointer = self.head
+
+            while pointer:
+                index += 1
+
+                if pointer.data == data:
+                    break
+
+                pointer = pointer.next
 
         return index
 
@@ -98,6 +103,7 @@ class LinkedList(abstract):
         while pointer:
             if pointer.data == data:
                 count += 1
+
             pointer = pointer.next
 
         return count
