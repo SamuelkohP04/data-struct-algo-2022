@@ -1,5 +1,6 @@
 print("\n"*100) # Unnecessary Line: to clear up the console for a better presentation. Yes.
 
+# This Demo is an implementation using Lists
 stack = [] 
 
 # Adding Elements to the stack (using append() function to push)
